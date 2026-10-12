@@ -110,7 +110,3 @@ The application keeps track of previously detected files and prevents duplicate 
 LinkedIn: https://linkedin.com/in/maynardcuellar
 
 Website: http://www.maynardcuellar.com
-
-## License
-
-Internal Use / Proprietary
