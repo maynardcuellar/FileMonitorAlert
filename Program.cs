@@ -293,44 +293,7 @@ namespace FolderTextMonitor
 
            
 
-        }
-
-        /*
-        private static void SendSMS(string file)
-        {
-            // Store the ACS connection string securely (e.g., env var: ACS_CONNECTION_STRING)
-            string connectionString = @"endpoint=https://comm-services-dev.unitedstates.communication.azure.com/;accesskey=2oyI3eIrNQjy7stdpwK73293vadvln2IdoTlRJhCfheD1V66ChyAJQQJ99BLACULyCp31wVaAAAAAZCS5AA7";
-
-            if (string.IsNullOrWhiteSpace(connectionString))
-            {
-                Console.WriteLine("Missing ACS connection string. Set ACS_CONNECTION_STRING env var.");
-                return;
-            }
-
-            var smsClient = new SmsClient(connectionString);
-
-            var fromNumber = "+18332417387"; // Your ACS phone number (SMS-enabled)
-            var toNumber = "+19178375268"; // Recipient
-
-            try
-            {
-                var response = smsClient.Send(
-                    from: fromNumber,
-                    to: toNumber,
-                    message: $"Error Encountered. Error found in file: {file}",
-                    options: new SmsSendOptions(enableDeliveryReport: true)
-                );
-
-                Console.WriteLine($"Message ID: {response.Value.MessageId}");
-                Console.WriteLine($"Successful: {response.Value.Successful}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Failed to send SMS:");
-                Console.WriteLine(ex.Message);
-            }
-        }
-        */
+        }     
 
         static async Task SendToTeams(string message)
         {
