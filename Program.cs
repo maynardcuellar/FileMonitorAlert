@@ -256,7 +256,7 @@ namespace FolderTextMonitor
                 Console.WriteLine($"{DateTime.Now.ToString()} Acknowledge message: {file}");
                 if ((matches > 0) && SendMail)
                 {
-                    SendEMail($"Dolphin Server Alert! '{searchString}' Occurred at {file}");
+                    SendEMail($"Alert! '{searchString}' Occurred at {file}");
                     //Console.WriteLine($"Send Mail 0,{matches}");
                 }
 
@@ -278,7 +278,7 @@ namespace FolderTextMonitor
 
                             if ((difference.TotalMinutes > _settings.PauseAlertMinutes) && SendMail) 
                             {
-                                SendEMail($"Dolphin Server Alert! '{searchString}' Occurred at {file}");
+                                SendEMail($"Alert! '{searchString}' Occurred at {file}");
                                 //Console.WriteLine($"Send Mail {oldval},{matches}");
                             }
 
@@ -352,7 +352,7 @@ namespace FolderTextMonitor
                 // Create the message payload
                 var payload = new
                 {
-                    //text = $"Dolphin Server Alert! Error Occurred at {message}"
+                    //text = $"Alert! Error Occurred at {message}"
                     text = message
                 };
 
